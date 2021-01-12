@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SmartphoneTest {
-    Smartphone smartphone = new Smartphone(3, "Smartphone3", 100, "Redmi");
+    Smartphone smartphone = new Smartphone(3, "Nokia", 100, "Iphone");
 
     @Test
-    void shouldNotMatchManufacturerOfSmartphone() {
-        String text = "Nokia";
+    void shouldManufacturerDoesNotMatch() {
+        String text = "Samsung";
         assertEquals(false, smartphone.matches(text));
     }
 
     @Test
-    void shouldMatchManufacturerOfSmartphone() {
-        String text = "Redmi";
+    void shouldManufacturerCorrespondsTo() {
+        String text = "Iphone";
         assertEquals(true, smartphone.matches(text));
 
     }

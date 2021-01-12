@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    Book book = new Book(4, "Faust", 100, "Gete");
+    Book book = new Book(4, "Pushkin", 100, "Tolstoi");
 
     @Test
     void shouldNotMatchAuthorOfBook() {
-        String text = "Po";
+        String text = "Esenin";
         assertEquals(false, book.matches(text));
     }
 
     @Test
     void shouldMatchAuthorOfBook() {
-        String text = "Gete";
+        String text = "Dostoevski";
         assertEquals(true, book.matches(text));
 
     }
