@@ -16,7 +16,7 @@ class BookTest {
 
     @Test
     void shouldMatchAuthorOfBook() {
-        String text = "Dostoevski";
+        String text = "Tolstoi";
         assertEquals(true, book.matches(text));
 
     }
